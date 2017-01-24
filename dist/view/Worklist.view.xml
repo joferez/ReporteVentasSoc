@@ -1,0 +1,133 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:commons="sap.suite.ui.commons" xmlns:semantic="sap.m.semantic"
+	xmlns:layout="sap.ui.layout" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:commons.suite="sap.suite.ui.commons" xmlns:viz.data="sap.viz.ui5.data"
+	controllerName="zreporteventas.controller.Worklist">
+	<semantic:FullscreenPage id="page" navButtonPress="onNavBack" showNavButton="true" title="{Title>/Vista}">
+		<semantic:content>
+			<Panel id="__panel0" expandable="true" headerText="{Title>/Sociedad} {Title&gt;/Negocio}" backgroundDesign="Solid" expanded="true">
+				<content>
+					<layout:VerticalLayout width="100%" id="__layout0">
+						<layout:content>
+							<Text text="Total {Totales>/TotalV}" id="__text6"/>
+							<Text text="Periodo: {Title>/Fecha1} a {Title>/Fecha2}" id="__text7"/>
+						</layout:content>
+					</layout:VerticalLayout>
+				</content>
+			</Panel>
+			<commons.suite:ChartContainer xmlns:commons.suite="sap.suite.ui.commons" id="chartContainer" customZoomInPress="onZoomIn"
+				customZoomOutPress="onZoomOut" showFullScreen="true" showPersonalization="false" autoAdjustHeight="true" showLegend="true">
+				<commons.suite:content>
+					<commons.suite:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart" id="__content1">
+						<commons.suite:content>
+							<viz:Popover xmlns:viz="sap.viz.ui5.controls" id="idPopOver"/>
+							<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" modelContextChange="onContextChange" id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+								height="100%" width="100%" vizType="column">
+								<viz:dataset>
+									<viz.data:FlattenedDataset xmlns:viz.data="sap.viz.ui5.data" data="{/VentasTotalesDiariasSet}" id="FlattenedD">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Fecha"
+												value="{ path: 'Fecha' , type: 'sap.ui.model.type.Date', formatOptions: { style: 'short', source: { pattern: 'dd/MM/yyyy' } } }"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Ventas" value="{Total}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" id="valueAxisFeed" uid="valueAxis" type="Measure" values="Ventas"/>
+									<viz.feeds:FeedItem xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" id="categoryAxisFeed" uid="categoryAxis" type="Dimension"
+										values="Fecha"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</commons.suite:content>
+					</commons.suite:ChartContainerContent>
+				</commons.suite:content>
+			</commons.suite:ChartContainer>
+			<List xmlns:mvc="sap.ui.core.mvc" xmlns:commons="sap.suite.ui.commons" xmlns:semantic="sap.m.semantic" xmlns:layout="sap.ui.layout"
+				xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+				xmlns:commons.suite="sap.suite.ui.commons" xmlns:viz.data="sap.viz.ui5.data" xmlns="sap.m" id="__list0"
+				items="{/VentasTotalesPorNegocioSet}" visible="false" noDataText="{i18n>Main_NoVn}">
+				<items>
+					<ObjectListItem type="Active" title="{DescSubNegocio}"
+						number="{ parts: [{path: 'Total'}, {path: 'Unidad'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false } }"
+						icon="sap-icon://retail-store" intro="{i18n>Maint_Vt} {Totales&gt;/Unidad}"/>
+				</items>
+			</List>
+			<Table id="__table0" items="{/TopVentasClientesSet}" visible="false" noDataText="{i18n>Maint_NOCli}">
+				<items>
+					<ColumnListItem id="__item0">
+						<cells>
+							<Text id="__text0" text="{NroCliente}" textAlign="Right"/>
+							<Text id="__text1" text="{DescCliente}"/>
+							<Text id="__text2"
+								text="{ parts: [{path: 'Total'}, {path: 'Unidad'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"/>
+							<Text id="__text12" text="{Porcentaje}"/></cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column id="__column0">
+						<header>
+							<Label text="{i18n>Mainr_NCli}" id="__label0"/>
+						</header>
+					</Column>
+					<Column id="__column1">
+						<header>
+							<Label id="__label1" text="{i18n>Main_NCliente}"/>
+						</header>
+					</Column>
+					<Column id="__column2">
+						<header>
+							<Label id="__label2" text="{i18n>Main_Tot} {Totales&gt;/Unidad}"/>
+						</header>
+					</Column>
+					<Column id="__column3">
+						<header>
+							<Text text="%" id="__text9"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+			<Table id="__table1" items="{/BottomVentasClientesSet}" visible="false" noDataText="{i18n>Maint_NOCli}">
+				<items>
+					<ColumnListItem id="__item10">
+						<cells>
+							<Text id="__text10" text="{NroCliente}" textAlign="Right"/>
+							<Text id="__text11" text="{DescCliente}"/>
+							<Text id="__text21"
+								text="{ parts: [{path: 'Total'}, {path: 'Unidad'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false, minFractionDigits: 4} }"/>
+							<Text id="__text122" text="{Porcentaje}"/></cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column id="__column10">
+						<header>
+							<Label text="{i18n>Mainr_NCli}" id="__label07"/>
+						</header>
+					</Column>
+					<Column id="__column12">
+						<header>
+							<Label id="__label13" text="{i18n>Main_NCliente}"/>
+						</header>
+					</Column>
+					<Column id="__column23">
+						<header>
+							<Label id="__label24" text="{i18n>Main_Tot} {Totales&gt;/Unidad}"/>
+						</header>
+					</Column>
+					<Column id="__column8">
+						<header>
+							<Text text="%" id="__text99"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Button width="auto" id="__button7" icon="sap-icon://filter" press="onOpenViewSettings" tooltip="Modificar Criterios de Filtrado"/>
+			<Button width="auto" id="__button9" icon="sap-icon://account" press="onOpenPrefUsuario" tooltip="Modificar Preferencias de usuario"/>
+		</semantic:customFooterContent>
+		<semantic:customHeaderContent>
+			<Button width="auto" id="__button10" icon="sap-icon://detail-view" press="onActionSheet" tooltip="Cambiar Datos a visualizar"/>
+		</semantic:customHeaderContent>
+	</semantic:FullscreenPage>
+</mvc:View>

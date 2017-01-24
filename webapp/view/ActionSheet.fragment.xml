@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ActionSheet
+		title="Vistas"
+		showCancelButton="true"
+		placement="Bottom">
+		<buttons>
+			<Button text="Ventas Diarias" icon="sap-icon://bar-chart" press="onVentasPress" />
+			<Button text="Ventas por Negocio" icon="sap-icon://retail-store" press="onVentasNegPress" />
+			<Button text="Top Clientes" icon="sap-icon://customer" press="onTopClientesPress" />
+			<Button text="Bottom Clientes" icon="sap-icon://customer" press="onBottomClientesPress" />
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

@@ -1,0 +1,41 @@
+[{
+	"DescSubNegocio": "HIGIENICOS",
+	"SubNegocio": "HIG",
+	"Total": 5670,
+	"Moneda": "USD",
+	"Fecha": "01122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"ClaveIdioma": "ES"
+}, {
+	"DescSubNegocio": "TOALLAS",
+	"SubNegocio": "TOA",
+	"Total": 2000,
+	"Moneda": "USD",
+	"Fecha": "02122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"ClaveIdioma": "ES"
+}, {
+	"DescSubNegocio": "SERVILLETAS",
+	"SubNegocio": "SER",
+	"Total": 180,
+	"Moneda": "USD",
+	"Fecha": "03122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"ClaveIdioma": "ES"
+}, {
+	"DescSubNegocio": "PAÑUELOS",
+	"SubNegocio": "PAÑ",
+	"Total": 10,
+	"Moneda": "USD",
+	"Fecha": "04122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"ClaveIdioma": "ES"
+}]

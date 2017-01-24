@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ViewSettingsDialog id="Filtros" confirm="onConfirmViewSettingsDialog" resetFilters="onViewSettingsDialogResetFilters" title='Filtros'>
+		<filterItems>
+			<ViewSettingsFilterItem id="FiltroSociedad" text="Sociedad" key="Sociedad" multiSelect="false" items="{/SociedadesSet}">
+				<items>
+					<ViewSettingsItem text="{DescSociedad}" key="{ClaveSociedad}" selected="{Selected}" id="viewFilter1"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem id="FiltroFecha" text="Fecha" key="Fecha" multiSelect="false" itemPropertyChanged="onFFechaChange">
+				<items>
+					<ViewSettingsItem text="Esta Semana" key="Semana" id="Semana" selected="true"/>
+					<ViewSettingsItem text="Este Mes" key="Mes" id="Mes"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem id="FiltroNegocio" text="Negocio" key="Negocio" multiSelect="false" items="{/NegociosSet}">
+				<items>
+					<ViewSettingsItem text="{Descripcion}" key="{Negocio}" selected="{Selected}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<!--			<ViewSettingsCustomItem text="Rango de Fechas" key="RangoF" id="RangoF">
+				<customControl>
+					<DateRangeSelection id="RangoF2" delimiter=" - "
+						displayFormat="dd/MM/yyyy" change="handleChangeRf" placeholder="Seleccione las fechas a filtrar "/>
+				</customControl>
+			</ViewSettingsCustomItem>-->
+		</filterItems>
+		<customTabs>
+			<ViewSettingsCustomTab id="app-settings" icon="sap-icon://calendar" title="Filtro Fecha" tooltip="Filtro Fecha">
+				<content>
+					<DateRangeSelection id="RangoF2" delimiter=" - " displayFormat="dd/MM/yyyy" change="handleChangeRf"
+						placeholder="Seleccione las fechas a filtrar "/>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

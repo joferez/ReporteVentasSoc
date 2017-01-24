@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog id="PrefUsuario" confirm="onConfirmViewSettingsDialog" resetFilters="onPrefUsuarioResetFilters"
+		title='Preferencias de Usuario'>
+		<filterItems>
+			<ViewSettingsFilterItem text="Unidad de Medida" key="Unidad" multiSelect="false">
+				<items>
+					<ViewSettingsItem text="Monto" key="Monto" selected="true"/>
+					<ViewSettingsItem text="Volumen" key="Volumen"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Moneda" key="Moneda" multiSelect="false">
+				<items>
+					<ViewSettingsItem text="USD" key="USD" selected="true"/>
+					<ViewSettingsItem text="CLP" key="CLP"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsCustomItem text="Top Clientes" key="TOP">
+				<customControl>
+					<Input width="100%" value="10" id="TOP" maxLength="3" filterSuggests="false" placeholder="Cantidad Top" type="Number" change="onTopChange"/>
+				</customControl>
+			</ViewSettingsCustomItem>
+			<ViewSettingsCustomItem text="Bottom Clientes" key="BOTTOM">
+				<customControl>
+					<Input width="100%" value="10" id="BOTTOM" maxLength="3" filterSuggests="false" placeholder="Cantidad Bottom" type="Number" change="onBottomChange"/>
+				</customControl>
+			</ViewSettingsCustomItem>
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

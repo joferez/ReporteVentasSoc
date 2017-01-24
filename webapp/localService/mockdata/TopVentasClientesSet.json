@@ -1,0 +1,67 @@
+[{
+	"Moneda": "USD",
+	"Total": 43487984397,
+	"DescCliente": "LG ",
+	"NroCliente": "123243455",
+	"Fecha": "01122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "USD"
+}, {
+	"Moneda": "USD",
+	"Total": 38388959,
+	"DescCliente": "Ford",
+	"NroCliente": "123321123",
+	"Fecha": "02122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "To"
+}, {
+	"Moneda": "USD",
+	"Total": 1000000,
+	"DescCliente": "Samsung",
+	"NroCliente": "243423346",
+	"Fecha": "02122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "K"
+}, {
+	"Moneda": "USD",
+	"Total": 384884845,
+	"DescCliente": "Jorge Benedeto",
+	"NroCliente": "323244456",
+	"Fecha": "03122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "CLP"
+}, {
+	"Moneda": "USD",
+	"Total": 193348984,
+	"DescCliente": "Dell",
+	"NroCliente": "878667675",
+	"Fecha": "04122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "USD"
+}, {
+	"Moneda": "USD",
+	"Total": 123875,
+	"DescCliente": "Portal",
+	"NroCliente": "324345566",
+	"Fecha": "05122016",
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"UnidadMedida": "MON",
+	"CantTop": 10,
+	"Unidad": "To"
+}]

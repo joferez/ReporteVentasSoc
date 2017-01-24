@@ -1,0 +1,63 @@
+[{
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 1000,
+	"Fecha": "01122016",
+	"Unidad": "USD"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 700,
+	"Fecha": "02122016",
+	"Unidad": "USD"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 250,
+	"Fecha": "03122016",
+	"Unidad": "To"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 2000,
+	"Fecha": "04122016",
+	"Unidad": "To"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 1600,
+	"Fecha": "05122016",
+	"Unidad": "USD"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 560,
+	"Fecha": "06122016",
+	"Unidad": "CLP"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 1250,
+	"Fecha": "07121016"
+}, {
+	"Negocio": "TISS",
+	"Sociedad": "106",
+	"Moneda": "USD",
+	"UnidadMedida": "MON",
+	"Total": 100,
+	"Fecha": "01122016"
+}]
